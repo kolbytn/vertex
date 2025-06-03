@@ -1,0 +1,169 @@
+{
+  "headDefinitions": [
+    {
+      "id": "standardHelmet",
+      "geometry": [
+        {
+          "type": "sphere",
+          "dimensions": {"x": 0.3, "y": 0, "z": 0},
+          "position": {"x": 0, "y": 0.25, "z": 0},
+          "texture": "green_metal_rust_diff_4k.jpg"
+        }
+      ]
+    }
+  ],
+  "torsoDefinitions": [
+    {
+      "id": "basicBackpack",
+      "geometry": [
+        {
+          "type": "box",
+          "dimensions": {"x": 0.4, "y": 0.5, "z": 0.2},
+          "position": {"x": 0, "y": 0, "z": 0.2}, 
+          "texture": "green_metal_rust_diff_4k.jpg"
+        }
+      ]
+    }
+  ],
+  "armDefinitions": [
+    {
+      "id": "standardArmGuard",
+      "geometry": [
+        {
+          "type": "capsule",
+          "dimensions": {"x": 0.12, "y": 0.3, "z": 0},
+          "position": {"x": 0, "y": -0.1, "z": 0.1},
+          "rotation": {"x": -10, "y": 0, "z": 0},
+          "texture": "green_metal_rust_diff_4k.jpg"
+        }
+      ]
+    }
+  ],
+  "legDefinitions": [
+    {
+      "id": "standardKneePad",
+      "geometry": [
+        {
+          "type": "capsule",
+          "dimensions": {"x": 0.12, "y": 0.3, "z": 0},
+          "position": {"x": 0, "y": -0.1, "z": 0.1},
+          "rotation": {"x": -10, "y": 0, "z": 0},
+          "texture": "green_metal_rust_diff_4k.jpg"
+        }
+      ]
+    }
+  ],
+  "weaponDefinitions": [
+    {
+      "id": "pistol",
+      "geometry": [
+        {
+          "type": "capsule",
+          "dimensions": {"x": 0.1, "y": 0.4, "z": 0.1},
+          "position": {"x": 0.0, "y": 0, "z": 0},
+          "rotation": {"x": 0, "y": 0, "z": 0},
+          "texture": "metal_plate_diff_4k.jpg"
+        }
+      ],
+      "attacks": [
+        {
+          "id": "bullet",
+          "damage": 10
+        }
+      ]
+    },
+    {
+      "id": "shotgun",
+      "geometry": [
+        {
+          "type": "capsule",
+          "dimensions": {"x": 0.1, "y": 1, "z": 0.1},
+          "position": {"x": 0.0, "y": 0, "z": 0},
+          "rotation": {"x": 0, "y": 0, "z": 0},
+          "texture": "metal_plate_diff_4k.jpg"
+        }
+      ],
+      "attacks": [
+        {
+          "id": "pellets",
+          "damage": 30,
+          "range": 10
+        },
+        {
+          "id": "melee",
+          "damage": 50,
+          "range": 2
+        }
+      ]
+    }
+  ],
+  "pcs": [
+    {
+      "id": "pc1",
+      "weaponDefinitionId": "shotgun"
+    },
+    {
+      "id": "pc2",
+      "position": {"x": -5, "y": 0, "z": 0}
+    }
+  ],
+  "npcs": [
+    {
+      "id": "humanoid1",
+      "type": "humanoid",
+      "position": {"x": 30, "y": 0, "z": -3},
+      "texture": "blue_metal_plate_diff_4k.jpg",
+      "headDefinitionId": "standardHelmet",
+      "torsoDefinitionId": "basicBackpack",
+      "legDefinitionId": "standardKneePad",
+      "armDefinitionId": "standardArmGuard",
+      "weaponDefinitionId": "pistol"
+    },
+    {
+      "id": "humanoid2",
+      "type": "humanoid",
+      "position": {"x": 35, "y": 0, "z": -3},
+      "texture": "blue_metal_plate_diff_4k.jpg",
+      "headDefinitionId": "standardHelmet",
+      "torsoDefinitionId": "basicBackpack",
+      "legDefinitionId": "standardKneePad",
+      "armDefinitionId": "standardArmGuard",
+      "weaponDefinitionId": "pistol"
+    }
+  ],
+  "structures": [
+    {
+      "type": "room",
+      "id": "MainRoom",
+      "center": {"x": 0, "y": 0, "z": -10},
+      "size": {"x": 10, "y": 4, "z": 10},
+      "thickness": 0.2,
+      "door": {
+        "face": [0, 1],
+        "width": 1.2,
+        "height": 2.5
+      }
+    },
+    {
+      "type": "box",
+      "id": "StandaloneBox1",
+      "center": {"x": 0, "y": 0, "z": 10},
+      "size": {"x": 2, "y": 3, "z": 1},
+      "angle": 0
+    },
+    {
+      "type": "box",
+      "id": "StandaloneBox2",
+      "center": {"x": 0, "y": 0, "z": 7},
+      "size": {"x": 2, "y": 6, "z": 1},
+      "angle": 0
+    },
+    {
+      "type": "wall",
+      "id": "StandaloneWall",
+      "center": {"x": 10, "y": 0, "z": 0},
+      "size": {"x": 1, "y": 3, "z": 5},
+      "angle": 0
+    }
+  ]
+} 
